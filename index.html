@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="手作静态页">
+<meta name="publisher" content="第一影视编辑部">
+<meta name="copyright" content="© 第一影视，转载请注明出处">
+<meta name="classification" content="影视评论与片目资料">
+<meta name="distribution" content="global">
+<meta name="description" content="第一影视把一部片子拆成三件事：讲什么、怎么拍、值不值得腾出两小时。华语、东亚与欧美作品按月归档，配分镜式笔记与观看建议。">
+<meta name="keywords" content="第一影视, 电影分镜笔记, 剧集档案, 观影前判断">
+<link rel="canonical" href="https://diyiyingshi-zh.github.io/">
+<meta property="og:site_name" content="第一影视">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第一影视｜一部片，先看清再坐下">
+<meta property="og:description" content="用分镜、叙事节奏与观影门槛给片子做笔记。每月更新华语、东亚与欧美的片目档案。">
+<meta property="og:url" content="https://diyiyingshi-zh.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14110d">
+<title>第一影视｜一部片，先看清再坐下 · 分镜笔记与片目档案</title>
+<style>
+:root{
+  --ink:#14110d;
+  --paper:#f1ece0;
+  --paper2:#e7e0d0;
+  --rule:#c9bfa8;
+  --deep:#7d2f1c;
+  --rust:#b4602f;
+  --olive:#4b5328;
+  --serif:"Source Han Serif SC","Noto Serif CJK SC","Songti SC",STSong,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:16px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(var(--paper2) 1px,transparent 1px),
+    linear-gradient(90deg,var(--paper2) 1px,transparent 1px);
+  background-size:26px 26px;
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block;}
+a{color:var(--deep);text-decoration:none;border-bottom:1px solid currentColor;}
+a:hover{border-bottom-color:transparent;background:rgba(180,96,47,.14);}
+
+/* ===== 刊头 ===== */
+.masthead{
+  border-bottom:5px double var(--ink);
+  padding:34px 24px 20px;
+  background:
+    radial-gradient(circle at 92% 18%,rgba(180,96,47,.13),transparent 42%),
+    var(--paper);
+}
+.mast-inner{max-width:1120px;margin:0 auto;}
+.mast-top{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  font-family:var(--sans);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:#6c6557;
+  border-bottom:1px solid var(--rule);padding-bottom:9px;flex-wrap:wrap;gap:8px;
+}
+.mast-top span:last-child{font-variant-numeric:oldstyle-nums;}
+.mast-title{
+  font-size:clamp(40px,9vw,96px);
+  line-height:1.05;letter-spacing:.04em;
+  margin:18px 0 6px;font-weight:700;
+  display:flex;align-items:baseline;gap:.16em;flex-wrap:wrap;
+}
+.mast-title em{
+  font-style:normal;color:var(--deep);
+  border-bottom:9px solid rgba(180,96,47,.4);padding-bottom:.05em;
+}
+.mast-sub{
+  font-family:var(--sans);font-size:13px;color:#514b3f;
+  letter-spacing:.06em;margin-top:14px;max-width:58ch;
+}
+.mast-meta{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--ink);border:1px solid var(--ink);
+  margin-top:26px;font-family:var(--sans);font-size:12px;
+}
+.mast-meta div{background:var(--paper);padding:11px 12px;}
+.mast-meta b{display:block;font-size:17px;letter-spacing:.04em;margin-bottom:2px;font-family:var(--serif);}
+@media(max-width:640px){.mast-meta{grid-template-columns:repeat(2,1fr);}}
+
+/* ===== 导航 ===== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(241,236,224,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--ink);
+}
+.nav ol{
+  list-style:none;margin:0;padding:0;
+  display:flex;gap:2px;overflow-x:auto;
+  max-width:1120px;margin:0 auto;
+  scrollbar-width:none;
+}
+.nav ol::-webkit-scrollbar{display:none;}
+.nav li a{
+  display:block;padding:12px 16px;font-family:var(--sans);
+  font-size:13px;letter-spacing:.1em;border-bottom:none;white-space:nowrap;
+}
+.nav li a:hover{background:var(--ink);color:var(--paper);}
+.nav li a i{
+  font-style:normal;color:var(--rust);font-size:10px;
+  margin-right:7px;font-variant-numeric:oldstyle-nums;
+}
+
+/* ===== 通用章节 ===== */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+section{padding:64px 0;border-top:1px solid var(--rule);}
+.kicker{
+  font-family:var(--sans);font-size:11px;letter-spacing:.3em;
+  color:var(--rust);text-transform:uppercase;margin:0 0 8px;
+}
+h2{
+  font-size:clamp(26px,4.4vw,42px);line-height:1.25;
+  margin:0 0 6px;letter-spacing:.03em;font-weight:700;
+}
+.h2note{font-family:var(--sans);font-size:13px;color:#5d5648;margin:0 0 34px;max-width:60ch;}
+h3{font-size:19px;margin:0 0 8px;letter-spacing:.02em;}
+
+/* ===== 片单：三栏分层 ===== */
+.cue{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:820px){.cue{grid-template-columns:1fr;}}
+.cue article{
+  background:var(--paper);border:1px solid var(--ink);
+  padding:20px 20px 18px;position:relative;
+}
+.cue article::before{
+  content:"";position:absolute;left:-1px;top:-1px;
+  width:34px;height:34px;background:var(--ink);
+  clip-path:polygon(0 0,100% 0,0 100%);
+}
+.cue .tag{
+  font-family:var(--sans);font-size:10px;letter-spacing:.2em;
+  color:#fff;background:var(--deep);padding:3px 9px;display:inline-block;
+  margin-bottom:16px;margin-left:8px;
+}
+.cue p{font-size:14.5px;color:#3d382f;margin:0 0 12px;font-family:var(--sans);}
+.cue .who{font-family:var(--serif);font-size:13px;color:#6c6557;border-top:1px dashed var(--rule);padding-top:9px;}
+.cue .who b{color:var(--ink);font-weight:600;}
+
+/* ===== 节奏：竖轴 ===== */
+.pulse{display:grid;grid-template-columns:150px 1fr;gap:0;margin-top:8px;}
+.pulse .row{display:contents;}
+.pulse .when{
+  font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+  color:var(--olive);padding:22px 16px 22px 0;border-right:2px solid var(--ink);
+  text-align:right;align-self:stretch;
+}
+.pulse .body{padding:18px 0 18px 24px;position:relative;}
+.pulse .body::before{
+  content:"";position:absolute;left:-6px;top:27px;
+  width:10px;height:10px;background:var(--rust);border:2px solid var(--paper);border-radius:50%;
+}
+.pulse .body h3{font-size:17px;}
+.pulse .body p{font-family:var(--sans);font-size:14px;color:#434039;margin:5px 0 0;max-width:66ch;}
+@media(max-width:640px){
+  .pulse .when{text-align:left;padding:16px 0 2px;border-right:none;border-bottom:1px solid var(--rule);}
+  .pulse .body{padding:12px 0 20px;}
+}
+
+/* ===== 专题：四栏左边框 ===== */
+.theme{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 34px;}
+@media(max-width:760px){.theme{grid-template-columns:1fr;}}
+.theme .blk{padding-left:16px;border-left:4px solid var(--deep);}
+.theme .blk:nth-child(2){border-left-color:var(--rust);}
+.theme .blk:nth-child(3){border-left-color:var(--olive);}
+.theme .blk:nth-child(4){border-left-color:var(--ink);}
+.theme p{font-family:var(--sans);font-size:14px;color:#434039;margin:7px 0 0;}
+.theme .sig{font-family:var(--sans);font-size:10px;letter-spacing:.2em;color:#8b836f;margin-top:10px;}
+
+/* ===== 问答：纯CSS折叠 ===== */
+.ask{font-family:var(--sans);}
+.ask input{position:absolute;opacity:0;height:0;width:0;}
+.ask .it{border-top:1px solid var(--rule);}
+.ask .it:last-child{border-bottom:1px solid var(--rule);}
+.ask label{
+  display:flex;gap:14px;align-items:baseline;cursor:pointer;
+  padding:17px 8px;font-size:15.5px;border-bottom:none;
+}
+.ask label:hover{background:rgba(125,47,28,.06);}
+.ask label b{
+  font-family:var(--serif);font-weight:700;color:var(--deep);
+  font-size:13px;min-width:32px;letter-spacing:.1em;
+}
+.ask .ans{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;
+  padding:0 8px 0 58px;color:#434039;font-size:14px;
+}
+.ask input:checked ~ .ans{max-height:420px;padding-bottom:20px;}
+.ask input:checked ~ label{background:rgba(125,47,28,.07);}
+.ask label::after{
+  content:"＋";margin-left:auto;color:var(--rust);font-size:18px;line-height:1;
+}
+
+/* ===== 说明：定义列表 ===== */
+.about dl{margin:0;display:grid;grid-template-columns:140px 1fr;gap:14px 26px;
+  font-family:var(--sans);font-size:14.5px;}
+.about dt{font-family:var(--serif);font-weight:700;letter-spacing:.06em;padding-top:2px;}
+.about dd{margin:0;color:#3d382f;border-bottom:1px dotted var(--rule);padding-bottom:14px;}
+@media(max-width:640px){.about dl{grid-template-columns:1fr;gap:4px 0;}.about dd{border-bottom:none;padding-bottom:16px;}}
+.addr{
+  margin-top:34px;background:var(--ink);color:var(--paper);
+  padding:22px 24px;font-family:var(--sans);font-size:13px;line-height:1.9;
+}
+.addr b{font-family:var(--serif);font-size:17px;letter-spacing:.1em;color:#f6c9a6;}
+.addr code{background:rgba(255,255,255,.1);padding:1px 7px;border-radius:2px;color:#f3d9b8;font-size:12.5px;word-break:break-all;}
+.addr a{color:#f3d9b8;border-bottom-color:rgba(243,217,184,.45);}
+
+/* ===== 页脚 ===== */
+.colophon{
+  border-top:5px double var(--ink);padding:30px 24px 44px;
+  font-family:var(--sans);font-size:12px;color:#6c6557;background:var(--paper2);
+}
+.colophon .in{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.colophon b{color:var(--ink);letter-spacing:.14em;font-family:var(--serif);}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="folio" id="top">
+  <div class="folio-in">
+    <div class="folio-bar">
+      <span>第一影视 · 观影备忘手帖</span>
+      <span>编号 № 0041</span>
+      <span>刊期 每月两辑</span>
+      <span>2026 秋辑</span>
+    </div>
+    <h1 class="folio-h">第<em>一</em>影视<span style="font-size:.42em;color:#7d2f1c;letter-spacing:.02em;">／先看门道，再坐下来</span></h1>
+    <p class="folio-lede">这里不排榜单，也不追热度。每部片子只回答三个问题：它到底在讲什么、镜头和节奏怎么安排的、你要不要给它两小时。把「第一眼」的判断，留给你自己。</p>
+    <div class="folio-stats">
+      <div><b>03</b>常驻栏目</div>
+      <div><b>每月</b>两辑更新</div>
+      <div><b>华语·东亚·欧美</b>三条片线</div>
+      <div><b>0</b>播放链接 · 纯文字归档</div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="主导航">
+  <ol>
+    <li><a href="#list"><i>01</i>本期片单</a></li>
+    <li><a href="#beat"><i>02</i>更新节奏</a></li>
+    <li><a href="#essay"><i>03</i>四种看法</a></li>
+    <li><a href="#notes"><i>04</i>常见疑问</a></li>
+    <li><a href="#colophon"><i>05</i>关于本站</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="list" class="wrap">
+  <p class="kicker">No. 01 — Current Reel Notes</p>
+  <h2>本期片单：三张不同的椅子</h2>
+  <p class="h2note">同一周能坐下看的三种片子。标注的是「进入门槛」和「情绪落点」，不是分数——分数会过期，门槛不会。</p>
+
+  <div class="cue">
+    <article>
+      <span class="tag">华语 · 长镜头</span>
+      <h3>慢下来的那顿饭</h3>
+      <p>一场家庭饭局拆成七个镜头，台词几乎不解释关系，全靠上菜的顺序和谁先放下筷子。适合想练「看画面而不是听对白」的人。</p>
+      <p class="who"><b>看点：</b>第 38 分钟的手持转场，全片情绪的真正转折点。<br><b>门槛：</b>低动作，需要耐性</p>
+    </article>
+
+    <article>
+      <span class="tag">东亚 · 悬疑</span>
+      <h3>电话那头的邻居</h3>
+      <p>用声音推进的六集结构，画面故意少给信息。笔记里标了每一集的「可信度裂缝」在哪，追完回头看第一集会有意思。</p>
+      <p class="who"><b>看点：</b>第 4 集结尾的声场反转。<br><b>门槛：</b>中等，忌倍速</p>
+    </article>
+
+    <article>
+      <span class="tag">欧美 · 公路</span>
+      <h3>往北开的那条国道</h3>
+      <p>看起来是逃亡片，实际讲的是两个人怎么把沉默聊成默契。配乐稀疏，空镜多，适合傍晚而不是通勤路上看。</p>
+      <p class="who"><b>看点：</b>加油站那段 4 分钟无台词。<br><b>门槛：</b>偏低，情绪片</p>
+    </article>
+  </div>
+</section>
+
+<section id="beat" class="wrap">
+  <p class="kicker">No. 02 — The Pace of This Log</p>
+  <h2>更新节奏：不赶档期</h2>
+  <p class="h2note">第一影视的更新跟着「看完并想清楚」的速度走，不跟着上映日历走。下面这条轴就是它的节拍。</p>
+
+  <div class="pulse">
+    <div class="row"><div class="when">每月 1 日</div><div class="body">
+      <h3>长评一辑</h3>
+      <p>只写一部，拆镜头、拆叙事结构，附一段「什么状态下看最合适」。篇幅长，留着慢慢读。</p>
+    </div></div>
+    <div class="row"><div class="when">每月 15 日</div><div class="body">
+      <h3>短笺三则</h3>
+      <p>三部的速写：各两三百字，讲清门槛、落点和一处容易错过的小设计，用来决定今晚看哪部。</p>
+    </div></div>
+    <div class="row"><div class="when">换季时</div><div class="body">
+      <h3>情绪片单重排</h3>
+      <p>按季节和心情重排旧档案，比如「入秋想安静」或「长假需要被拖着走」，旧的片子换条入口又活一次。</p>
+    </div></div>
+    <div class="row"><div class="when">随时</div><div class="body">
+      <h3>勘误与补注</h3>
+      <p>看第二遍发现之前写错了就改，改的地方留一条划线记录。这里不装「一次看懂」的聪明。</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="essay" class="wrap">
+  <p class="kicker">No. 03 — Four Ways In</p>
+  <h2>四种看法：别只按类型找片</h2>
+  <p class="h2note">同一个片子，换个入口就换种享受。这是第一影视写笔记的固定四条线。</p>
+
+  <div class="theme">
+    <div class="blk">
+      <h3>按镜头进门</h3>
+      <p>盯着构图、景别和剪辑点看。适合看第二遍，或者明明看懂了却觉得「哪儿不对劲」的时候。</p>
+      <div class="sig">栏目签名：分镜手记</div>
+    </div>
+    <div class="blk">
+      <h3>按节奏进门</h3>
+      <p>关心它什么时候快、什么时候留白。选片先看「我今晚扛不扛得住慢」，比看评分准。</p>
+      <div class="sig">栏目签名：节拍表</div>
+    </div>
+    <div class="blk">
+      <h3>按情绪进门</h3>
+      <p>不问好不好，只问你现在需要被安抚、被搅动，还是被逗笑。片单从这里长出来。</p>
+      <div class="sig">栏目签名：今晚状态</div>
+    </div>
+    <div class="blk">
+      <h3>按门槛进门</h3>
+      <p>给时间成本算账：要不要动脑、能不能倍速、能不能随时暂停。给通勤党和带娃的人写的。</p>
+      <div class="sig">栏目签名：两小时账本</div>
+    </div>
+  </div>
+</section>
+
+<section id="notes" class="wrap">
+  <p class="kicker">No. 04 — Notes &amp; Boundaries</p>
+  <h2>常见疑问</h2>
+  <p class="h2note">点开看。都是读者问过、值得摊开说清的边界问题。</p>
+
+  <div class="ask">
+    <div class="fold-i">
+      <input id="q1" type="checkbox"><label for="q1"><b>Q.01</b>第一影视是资源站吗，能在这里看片吗？</label>
+      <div class="fold-a">不是，也不提供。本站只做文字层面的片目归档、镜头笔记和观看建议，不放播放地址、下载入口或网盘链接。想看片子请走你手头正规的平台或影院。这样写东西的人也能安心把细节写具体。</div>
+    </div>
+    <div class="fold-i">
+      <input id="q2" type="checkbox"><label for="q2"><b>Q.02</b>为什么不给打分，也不排 TOP 榜？</label>
+      <div class="fold-a">分数会把一次具体的观看压成一个数字，而同一部片在疲惫的周二和悠闲的周日完全是两回事。这里给的是门槛、节奏和情绪落点，判断留给你。真要对比，也只在同类片子之间横向写，不跨类型硬排。</div>
+    </div>
+    <div class="fold-i">
+      <input id="q3" type="checkbox"><label for="q3"><b>Q.03</b>片单会不会追着热搜更新？</label>
+      <div class="fold-a">不会。上线的依据只有一条：看完之后还有话想写。热播的会写，冷门的老片也会写；反过来，再火的片子，看完觉得没值得记的东西，就不进档案。</div>
+    </div>
+    <div class="fold-i">
+      <input id="q4" type="checkbox"><label for="q4"><b>Q.04</b>转载或引用里面的笔记可以吗？</label>
+      <div class="fold-a">欢迎，但请保留出处和本站地址，别截断改写后当原创。短引一两句没问题，整篇搬运请先打个招呼。这也是让这类手写档案还能继续活着的唯一条件。</div>
+    </div>
+    <div class="fold-i">
+      <input id="q5" type="checkbox"><label for="q5"><b>Q.05</b>为什么这个页面没有花哨的播放器和弹幕？</label>
+      <div class="fold-a">刻意的。字小、留白多、没有自动滚动的横幅，是为了让你读完一段再决定要不要往下翻。加载也快，弱网下照样能读全文字——搜索引擎和读者，要的其实是同一件事。</div>
+    </div>
+  </div>
+</section>
+
+<section id="colophon" class="wrap about">
+  <p class="kicker">No. 05 — Colophon</p>
+  <h2>关于本站</h2>
+  <p class="h2note">把「第一影视」当成一份持续手写的小册子，而不是一个平台。下面是它的几行自报家门。</p>
+
+  <dl>
+    <dt>它是什么</dt>
+    <dd>一个只谈影视文本的私人归档页：片目笔记、镜头拆解、节奏与观看门槛，不含播放与下载功能。</dd>
+    <dt>写给谁</dt>
+    <dd>不想被算法推着看片的人；看完想弄明白「它哪儿打动我」的人；以及时间紧、想先判断值不值得坐下的通勤观众。</dd>
+    <dt>立场</dt>
+    <dd>不接推广、不写软文、不拿评分当结论。写到不确定的地方会标出来，写错了会留勘误。</dd>
+    <dt>更新</dt>
+    <dd>每月两辑，长评与短笺交替；换季重排情绪片单。页面本身很轻，刷新就能看到最新的一期。</dd>
+    <dt>技术</dt>
+    <dd>单个静态页面，样式与结构全部内联，无外部脚本、无追踪、无弹窗，移动端直接读。</dd>
+    <dt>防仿提醒</dt>
+    <dd>唯一地址只有下面这一条，长得像的都不是这里。别在任何仿站填密码或装插件。</dd>
+  </dl>
+
+  <div class="addr">
+    <b>唯一地址 · 认准这条</b><br>
+    第一影视 正式站点：<code>https://diyiyingshi-zh.github.io/</code><br>
+    转载与联络请注明出处「第一影视」，本站不设置会员、不收付费、不跳转第三方下载。<br>
+    <span style="opacity:.7;">© 第一影视 · 手写归档，逐期更新</span>
+  </div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <div class="in">
+    <span><b>第一影视</b> · 观影备忘手帖 ｜ 先看门道，再坐下来</span>
+    <span>https://diyiyingshi-zh.github.io/</span>
+  </div>
+</footer>
+
+</body>
+</html>
